@@ -1,5 +1,6 @@
-import "./App.css";
 import React, { useEffect } from "react";
+import Document from "./Document";
+import "./App.css";
 
 function App() {
   useEffect(() => {
@@ -20,7 +21,7 @@ function App() {
       </section>
       <div class="container is-fullhd">
         <div class="notification">
-          Edit the <code>./src</code> folder to add components.
+          <Document />
         </div>
       </div>
     </div>
