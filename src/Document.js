@@ -6,9 +6,10 @@ export default function Document(props) {
   return (
     <div className="content">
       {props.content}
-      <button disabled={disable} onClick={() => setDisable(false)}>
-        I Agree{" "}
+      <button type="button" disabled>
+        I Agree
       </button>
+
       <div className="title">Terms and Conditions</div>
     </div>
   );
