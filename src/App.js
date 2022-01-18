@@ -1,6 +1,15 @@
 import "./App.css";
+import React, { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    fetch("https://jaspervdj.be/lorem-markdownum/markdown.txt")
+      .then((response) => response.text())
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => console.log(err));
+  });
   return (
     <div className="App">
       <section class="hero">
