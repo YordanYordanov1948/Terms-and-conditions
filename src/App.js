@@ -6,8 +6,8 @@ function App({ title, content }) {
   useEffect(() => {
     fetch("https://jaspervdj.be/lorem-markdownum/markdown.txt")
       .then((response) => response.text())
-      .then((response) => {
-        console.log(response);
+      .then((data) => {
+        console.log(data);
       })
       .catch((err) => console.log(err));
   });
@@ -22,7 +22,10 @@ function App({ title, content }) {
       </section>
       <div class="container is-fullhd">
         <div class="notification">
-          <Document title={(title, content)} />
+          <Document
+            title={(title = "Terms and Conditions")}
+            content={content}
+          />
         </div>
       </div>
     </div>
