@@ -1,14 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function Document(props) {
-  const [disable, setDisable] = useState(false);
+export default function Document(props, { disabled }) {
   return (
     <div className="content">
       {props.content}
       <div className="title">{props.title}</div>
-      <button disabled={disable} onClick={() => setDisable(true)}>
-        I Agree
-      </button>
+      <button disabled={disabled}>I Agree</button>
     </div>
   );
 }
