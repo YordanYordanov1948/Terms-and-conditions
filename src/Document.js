@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 
 export default function Document(props) {
-  const [disabled, setDisable] = useState(false);
+  const [value, setValue] = useState("");
 
   return (
     <div className="content">
       {props.content}
       <div className="title">{props.title}</div>
-      <button disabled={disabled} onClick={() => setDisable(true)}>
-        I Agree
-      </button>
+      <button disabled={!value}>I Agree</button>{" "}
     </div>
   );
 }
