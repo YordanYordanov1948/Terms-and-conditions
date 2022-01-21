@@ -1,12 +1,11 @@
 import React from "react";
 
-export default function Document() {
+export default function Document(props) {
   return (
     <div className="content">
-      <div className="title">Terms and Conditions</div>
-      <button type="button" disabled>
-        I Agree
-      </button>
+      {props.content}
+      <div className="title">{props.title}</div>
+      <button type="button">I Agree</button>
     </div>
   );
 }
