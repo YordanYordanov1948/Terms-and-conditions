@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Document from "./Document";
 import "./App.css";
 
-function App() {
+function App({ title, content }) {
   useEffect(() => {
     fetch("https://jaspervdj.be/lorem-markdownum/markdown.txt")
       .then((response) => response.text())
@@ -11,6 +11,7 @@ function App() {
       })
       .catch((err) => console.log(err));
   });
+
   return (
     <div className="App">
       <section class="hero">
@@ -21,7 +22,7 @@ function App() {
       </section>
       <div class="container is-fullhd">
         <div class="notification">
-          <Document />
+          <Document title={(title, content)} />
         </div>
       </div>
     </div>
