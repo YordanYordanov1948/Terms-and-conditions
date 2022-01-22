@@ -8,6 +8,10 @@ function App({ title, content }) {
       .then((response) => response.text())
       .then((data) => {
         console.log(data);
+        const textFromApi = document.createElement("div");
+        textFromApi.innerHTML = data;
+        const main = document.querySelector(".content");
+        main.appendChild(textFromApi);
       })
       .catch((err) => console.log(err));
   });
